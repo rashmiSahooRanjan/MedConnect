@@ -1,0 +1,66 @@
+[
+  {
+    "id": "SMS_1779157545529",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹350 payment via UPI for Dr. Rashmi Ranjan Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-05-19T02:25:45.529Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775736314000",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹210 payment via CREDIT for Dr. Satyjiy Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-09T12:05:14.000Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775706841952",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹210 payment via CREDIT for Dr. Satyjiy Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-09T03:54:01.952Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775706088784",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹210 payment via CREDIT for Dr. Satyjiy Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-09T03:41:28.784Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775703559187",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹210 payment via UPI for Dr. Satyjiy Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-09T02:59:19.187Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775531800472",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹210 payment via UPI for Dr. Satyjiy Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-07T03:16:40.472Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775527059096",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹420 payment via UPI for Dr. Rahul Barika confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-07T01:57:39.096Z",
+    "status": "sent"
+  },
+  {
+    "id": "SMS_1775527001169",
+    "phoneNumber": "919348698773",
+    "message": "Hi Hi Rashmi Ranjan Sahoo, ₹210 payment via CREDIT for Dr. Satyjiy Sahoo confirmed! - MediConnect, your payment of Rs.undefined for appointment with Dr. undefined has been received. Thank you!",
+    "type": "payment_confirmation",
+    "timestamp": "2026-04-07T01:56:41.169Z",
+    "status": "sent"
+  }
+]
