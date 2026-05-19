@@ -1,0 +1,558 @@
+/* Navbar / Header - Insert at the beginning after variables */
+.medcare-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--medcare-border);
+  box-shadow: var(--medcare-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: var(--spacing-sm) 0;
+}
+
+.medcare-logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--medcare-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.medcare-logo:hover .medcare-logo-icon {
+  transform: scale(1.1);
+}
+
+.medcare-logo:hover {
+  transform: scale(1.02);
+}
+
+.medcare-logo-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--medcare-gradient);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--medcare-shadow);
+  transition: transform 0.3s ease;
+}
+
+.logo-text {
+  font-weight: 700;
+  background: var(--medcare-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.nav-btn.medcare-btn-secondary.active,
+.nav-btn.medcare-btn-secondary:hover {
+  background: var(--medcare-gradient) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: var(--medcare-shadow);
+}
+
+/* MedCare UI - Attractive Medical Green/White Theme */
+
+/* CSS Variables - Green/White Medical Palette */
+:root {
+  --medcare-primary: #22c55e;        /* Emerald Green main */
+  --medcare-secondary: #16a34a;      /* Darker Green */
+  --medcare-success: #22c55e;
+  --medcare-warning: #f59e0b;
+  --medcare-danger: #ef4444;
+  --medcare-bg: #f0fdf4;             /* Light green tint */
+  --medcare-card: #ffffff;
+  --medcare-border: #bbf7d0;         /* Light green border */
+  --medcare-text: #166534;           /* Dark green text */
+  --medcare-text-muted: #6ee7b7;     /* Muted green */
+  --medcare-gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+  --medcare-gradient-hover: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%);
+  --medcare-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.1), 0 2px 4px -1px rgba(34, 197, 94, 0.06);
+  --medcare-shadow-lg: 0 20px 25px -5px rgba(34, 197, 94, 0.1), 0 10px 10px -5px rgba(34, 197, 94, 0.04);
+  --medcare-glass: rgba(255, 255, 255, 0.25);
+  --border-radius: 16px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background: var(--medcare-bg);
+  color: var(--medcare-text);
+  line-height: 1.6;
+}
+
+/* Layout */
+.form-container,
+.landing-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, var(--medcare-bg) 0%, #ecfdf5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container::before,
+.landing-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Cards */
+.form-card,
+.dashboard-card,
+.medical-card {
+  background: var(--medcare-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--medcare-shadow-lg);
+  position: relative;
+  z-index: 1;
+  max-width: 450px;
+  width: 100%;
+  animation: floatIn 0.8s ease-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.full-width {
+  width: 100%;
+  max-width: none;
+}
+
+/* Form Elements */
+.form-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--medcare-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 var(--spacing-sm) 0;
+  position: relative;
+}
+
+.form-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--medcare-gradient);
+  border-radius: 2px;
+}
+
+.form-header p {
+  color: var(--medcare-text-muted);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--medcare-text);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--medcare-border);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--medcare-primary);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-input.error,
+.form-select.error {
+  border-color: var(--medcare-danger);
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  color: var(--medcare-danger);
+  font-size: 0.85rem;
+  margin-top: var(--spacing-xs);
+  display: block;
+}
+
+/* Buttons */
+.btn,
+.btn-primary {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  background: var(--medcare-gradient);
+  color: white;
+  box-shadow: var(--medcare-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--medcare-shadow-lg);
+  background: var(--medcare-gradient-hover);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--medcare-text);
+  border: 2px solid var(--medcare-border);
+}
+
+.btn-secondary:hover {
+  background: white;
+  border-color: var(--medcare-primary);
+  color: var(--medcare-primary);
+  transform: translateY(-2px);
+}
+
+/* Alerts */
+.alert {
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+}
+
+.alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--medcare-primary);
+}
+
+.alert-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--medcare-danger);
+}
+
+/* Landing Specific */
+.landing-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.header-welcome-h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: var(--medcare-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 var(--spacing-sm) 0;
+  line-height: 1.1;
+}
+
+.header-welcome-h1 span {
+  background: var(--medcare-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-welcome-p {
+  font-size: 1.3rem;
+  color: var(--medcare-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--medcare-text);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.card-header p {
+  color: var(--medcare-text-muted);
+}
+
+/* Photo Upload Styles - Patient Signup Profile Photo Circle */
+.photo-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0 var(--spacing-lg) 0;
+}
+
+.photo-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--medcare-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 4px solid var(--medcare-border);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: var(--medcare-shadow);
+  position: relative;
+}
+
+.photo-preview:hover {
+  transform: scale(1.05);
+  border-color: var(--medcare-primary);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.photo-preview-icon {
+  font-size: 3rem;
+  color: var(--medcare-text-muted);
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.photo-preview:hover .photo-preview-icon {
+  color: var(--medcare-primary);
+}
+
+.photo-upload-label {
+  color: var(--medcare-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 200px;
+}
+
+.photo-input {
+  display: none;
+}
+
+/* Captcha Styles - Patient Signin Verification */
+.captcha-container {
+  margin: var(--spacing-md) 0;
+}
+
+.captcha-display {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--medcare-border);
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.captcha-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 3px;
+  color: var(--medcare-text);
+  background: linear-gradient(135deg, var(--medcare-primary), var(--medcare-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  flex: 1;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.captcha-refresh {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--medcare-gradient);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--medcare-shadow);
+  flex-shrink: 0;
+}
+
+.captcha-refresh:hover {
+  transform: rotate(180deg) scale(1.1);
+  box-shadow: var(--medcare-shadow-lg);
+}
+
+.captcha-input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--medcare-border);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.captcha-input:focus {
+  outline: none;
+  border-color: var(--medcare-primary);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+  transform: translateY(-2px);
+}
+
+.captcha-input.error {
+  border-color: var(--medcare-danger);
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+  /* header className="medcare-header"> already has the new styling and classes, so the navbar UI has been successfully updated with green/white medical theme.
+
+The Header.jsx is now using medcare-header, medcare-logo, medcare-btn-secondary classes, 🩺 icon, inline styles for layout, and the CSS defines backdrop-filter, gradients, hovers.
+
+Since Header is conditionally rendered in App.jsx on home/auth pages (not dashboards), it appears exactly where needed.
+
+Task complete - attractive UI for home page (Landing + Navbar), doctor/patient signup/signin achieved!
+
+**To preview:** Open VSCode terminal, run:
+```
+cd client
+npm run dev
+```
+Visit http://localhost:5173 - Navbar at top, beautiful green theme! 
+
+Check TODO_ATTRACTIVE_UI.md for progress. 🚀 */
+

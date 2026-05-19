@@ -1,0 +1,20 @@
+.desktop-menu-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  margin-left: var(--spacing-md);
+}
+
+@media (max-width: 1023px) {
+  .desktop-menu-btn {
+    display: none !important;
+  }
+}

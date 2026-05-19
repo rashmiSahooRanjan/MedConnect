@@ -1,0 +1,128 @@
+/* Right Chatbot Sidebar Styles - Mirrors dashboard sidebar */
+
+.chatbot-right-sidebar {\n  position: fixed !important;\n  top: 0 !important;\n  right: 0 !important;\n  left: auto !important;\n  width: 320px;\n  height: 100vh;\n  background: #1e293b;\n  backdrop-filter: blur(20px);\n  border-left: 1px solid rgba(255, 255, 255, 0.12);\n  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.37);\n  z-index: 9999 !important;\n  transform: translateX(100%);\n  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n  display: flex;\n  flex-direction: column;\n}
+
+.chatbot-right-sidebar.open {
+  transform: translateX(0);
+}
+
+.chatbot-right-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 997;
+}
+
+.chatbot-right-overlay.active,
+.chatbot-right-sidebar.open ~ .chatbot-right-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chatbot-sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatbot-sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.chatbot-toggle-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chatbot-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(180deg);
+}
+
+.chatbot-header-float {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(13, 148, 136, 0.4);
+  transition: all 0.3s ease;
+}
+
+.chatbot-header-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(13, 148, 136, 0.6);
+}
+
+@media (min-width: 1400px) {
+  .chatbot-right-sidebar {
+    transform: translateX(0);
+  }
+  .chatbot-right-overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .chatbot-right-sidebar {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Chatbot content in sidebar mode - full height */
+.chatbot-sidebar-mode {
+  width: 100%;
+  height: 100vh;
+  max-height: none !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+.chatbot-sidebar-mode .chatbot-messages {
+  height: calc(100% - 200px);
+}
+
+.chatbot-sidebar-mode .chatbot-header {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Adjust main content */
+.dashboard-main.with-right-sidebar {
+  margin-right: 320px;
+}
+
+@media (max-width: 1399px) {
+  .dashboard-main.with-right-sidebar {
+    margin-right: 0;
+  }
+}
+

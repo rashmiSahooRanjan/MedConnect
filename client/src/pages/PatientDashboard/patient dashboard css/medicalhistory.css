@@ -1,0 +1,486 @@
+/* Medical History - Attractive UI Styles */
+/* Professional medical theme: Blues, gradients, smooth animations */
+
+:root {
+  --medical-primary: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  --medical-secondary: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --medical-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --medical-warning: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --medical-card-bg: rgba(255, 255, 255, 0.95);
+  --medical-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --medical-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.medical-history .dashboard-home,
+.dashboard-home.medical-history-scope {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.medical-history .history-container,
+.history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--medical-card-bg);
+  border-radius: 24px;
+  box-shadow: var(--medical-shadow);
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.medical-history .section-header,
+.section-header {
+  background: var(--medical-primary);
+  padding: 2.5rem 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header::before {
+  content: '📋';
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.1;
+  top: 1rem;
+  right: 2rem;
+}
+
+.medical-history .section-header h2,
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.medical-history .tab-btn,
+.tab-btn {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transition: left 0.3s;
+}
+
+.tab-btn:hover::before {
+  left: 0;
+}
+
+.tab-btn.active {
+  background: var(--medical-secondary);
+  border-color: rgba(255,255,255,0.5);
+  box-shadow: var(--medical-glow);
+  transform: translateY(-2px);
+}
+
+.tab-count {
+  background: rgba(255,255,255,0.3);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.history-timeline {
+  padding: 2rem;
+}
+
+.history-date-group {
+  margin-bottom: 3rem;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.medical-history .history-date-header,
+.history-date-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, var(--medical-primary), var(--medical-secondary));
+  color: white;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.date-item-count {
+  margin-left: auto;
+  background: rgba(255,255,255,0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.history-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  position: relative;
+}
+
+.history-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-left-color: #3b82f6;
+}
+
+.history-marker {
+  flex-shrink: 0;
+}
+
+.marker-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.history-item:hover .marker-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.history-content {
+  flex: 1;
+}
+
+.history-header h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.history-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.relative-time {
+  background: #f3f4f6;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-left: 0.75rem;
+}
+
+.history-description {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.75rem 0 1rem 0;
+}
+
+.category-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.view-details-btn {
+  background: var(--medical-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--medical-glow);
+}
+
+.no-history {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+}
+
+.empty-state-icon {
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--medical-card-bg);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  max-width: 550px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: var(--medical-shadow);
+  animation: modalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 2rem 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--medical-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.close-btn {
+  background: rgba(0,0,0,0.2);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-body {
+  padding: 0 2rem 2rem;
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  background: rgba(248, 250, 252, 0.8);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #3b82f6;
+}
+
+.modal-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.modal-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-home {
+    padding: 1rem;
+  }
+  
+  .history-container {
+    border-radius: 16px;
+    margin: 0;
+  }
+  
+  .section-header {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .tab-buttons {
+    gap: 0.5rem;
+  }
+  
+  .tab-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .history-timeline {
+    padding: 1.5rem;
+  }
+  
+  .history-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .history-marker {
+    align-self: flex-start;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.7rem;
+  }
+  
+  .history-date-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Category Color Overrides for Medical Theme */
+.bg-blue-100.text-blue-800 { background: rgba(59,130,246,0.2) !important; color: #1e40af !important; }
+.bg-green-100.text-green-800 { background: rgba(16,185,129,0.2) !important; color: #059669 !important; }
+.bg-orange-100.text-orange-800 { background: rgba(245,158,11,0.2) !important; color: #d97706 !important; }
+.bg-purple-100.text-purple-800 { background: rgba(139,92,246,0.2) !important; color: #7c3aed !important; }
+.bg-indigo-100.text-indigo-800 { background: rgba(99,102,241,0.2) !important; color: #3730a3 !important; }
+.bg-gray-100.text-gray-800 { background: rgba(107,114,128,0.1) !important; color: #374151 !important; }
+
+/* Enhanced Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.loading-container::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scope for Medical History Context - Add to JSX if needed: className="medical-history-scope" */
+.medical-history-scope .dashboard-home {
+  --medical-primary: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+}
+
